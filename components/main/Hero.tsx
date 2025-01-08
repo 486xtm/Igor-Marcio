@@ -9,17 +9,17 @@ import StarsCanvas from './StarBackground';
 
 const socialLinks = [
   {
-    href: 'https://github.com/RaymondSWE',
+    href: 'https://github.com/486xtm',
     label: 'GitHub',
     icon: <FaGithub />,
   },
   {
-    href: 'https://linkedin.com/in/raman-mohammed',
+    href: 'https://www.linkedin.com/in/andrew-roberts-a46b80344/',
     label: 'LinkedIn',
     icon: <FaLinkedinIn />,
   },
   {
-    href: 'mailto:ramanmohammed@hotmail.com',
+    href: 'mailto:roberts94.me@gmail.com',
     label: 'Email',
     icon: <FaEnvelope />,
   },
@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="Welcome-box py-2 px-2 border border-[#7042f88b] opacity-[0.9]">
               <FaCode className="text-[#b49bff] mr-[10px] h-5 w-5" />
               <div className="Welcome-text italic md:text-xl text-xs px-2 ml-[-12px] font-semibold">
-                Raman Mohammed - Software Engineer
+                I 'm Andrew Roberts - Software Engineer
               </div>
             </div>
           </div>
@@ -59,19 +59,22 @@ const Hero = () => {
             </span>
           </h2>
           <h4 className="md:text-xl text-base font-medium text-gray-400 mt-1 mb-[-6px] italic flex ">
-            <Image
+            {/* <Image
               src="/sweden.png"
               alt="Sweden Flag"
               width={24}
               height={24}
               className="mr-2"
-            />
-            Based in Sweden
+            /> */}
+            Based in Georgia, US
           </h4>
 
           <TextGenerateEffect
-            words="I'm a self-motivated software developer with 4+ years of experience in desktop and web applications. 
-            I have a Bachelor's in Computer Science and am pursuing a Master's in Software Engineering at Chalmers to keep learning new skills. I specialize in Java, React, TypeScript, Docker, MySQL, and Spring."
+            words="I'm a self-motivated software developer with 7+ years of experience in web and mobile applications. 
+            I have a Bachelor's in Computer Science and am pursuing a Master's in Software Engineering to keep learning new skills.
+            Proficient in OpenAI technologies, utilizing modern development tools and creating effective CI/CD pipelines.
+            I specialize in  React, Next, Vue, React Native, Node, TypeScript and so on.
+            "
           />
           <div className="flex flex-col md:flex-row items-center mt-2 z-20">
             <button
@@ -104,8 +107,8 @@ const Hero = () => {
         >
           <div className="relative overflow-hidden rounded-3xl bg-[#ffffff10] backdrop-blur-xl border border-border-custom flex justify-center items-center shadow-sm shadow-gray-800 w-[200px] h-[300px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[370px]">
             <Image
-              src="/happy-raman.jpg"
-              alt="Raman Mohammed Image"
+              src="/photo.jpg"
+              alt="Andrew Roberts Image"
               className="object-cover object-bottom filter grayscale contrast-65 opacity-90"
               priority
               fill

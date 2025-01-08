@@ -2,7 +2,7 @@ export const statisticsData = [
   {
     id: 1,
     icon: '/project-plan.png',
-    number: 7,
+    number: 10,
     description: 'Projects Completed',
     suffix: '+',
   },
@@ -16,7 +16,7 @@ export const statisticsData = [
   {
     id: 3,
     icon: '/experience.png',
-    number: 4,
+    number: 7,
     description: 'Software Experience',
     suffix: ' years',
   },
