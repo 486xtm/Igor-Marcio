@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="Welcome-box py-2 px-2 border border-[#7042f88b] opacity-[0.9]">
               <FaCode className="text-[#b49bff] mr-[10px] h-5 w-5" />
               <div className="Welcome-text italic md:text-xl text-xs px-2 ml-[-12px] font-semibold">
-                I 'm Andrew Roberts - Software Engineer
+                I&rsquo;m Andrew Roberts - Software Engineer
               </div>
             </div>
           </div>
