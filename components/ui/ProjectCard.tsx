@@ -45,13 +45,15 @@ const ProjectCard = ({
         aria-labelledby={`project-title-${id}`}
         tabIndex={0}
       >
-        <div className="w-full h-48 relative p-2">
+        <div
+          className="w-full h-48 relative p-2"
+          onClick={() => setModalOpen(true)}
+        >
           <Image
             src={src}
             alt={`Image of ${title}`}
             fill
             className="object-cover z-20 cursor-pointer border-b border-border-custom"
-            onClick={() => setModalOpen(true)}
           />
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black via-transparent opacity-75 rounded-b-lg" />
           {endDate === null && (
@@ -142,7 +144,10 @@ const ProjectCard = ({
           )}
         </div>
 
-        <div className="absolute inset-0 flex items-start justify-center mt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div
+          className="absolute inset-0 flex items-start justify-center mt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+          onClick={() => setModalOpen(true)}
+        >
           <span className="text-white bg-black bg-opacity-50 rounded-lg px-4 py-2 z-20">
             Click the image to view details
           </span>
