@@ -76,10 +76,10 @@ export const projectsData = [
     id: 9,
     category: ProjectCategories.WebApplication,
     src: '/project-img/hatronica.png',
-    title: 'Hatronica',
+    title: 'Hatronika',
     description:
       "Hatronika Energy stands at the forefront of revolutionary advancements in the energy sector, presenting the world's first decentralized energy network free from traditional grids.",
-    sourceUrl: null,
+    sourceUrl: "https://qa-portal.hatronika.com/",
     youtubeUrl: 'https://www.youtube.com/watch?v=xgjgKXiGaOE',
     githubUrl: null,
     startDate: '2023-05-10',

@@ -75,6 +75,9 @@ module.exports = {
           '5': 'hsl(var(--chart-5))',
         },
       },
+      boxShadow: {
+        glow: "0 0 20px rgba(255, 255, 255, 0.3)",
+      }
     },
   },
   plugins: [addVariablesForColors, require('tailwindcss-animate')],

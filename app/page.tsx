@@ -15,11 +15,11 @@ export default function Home() {
     <main className="h-full w-full">
       <div className="flex flex-col gap-12 md:gap-24 lg:gap-32">
         <Hero />
+        <Projects />
         <Services />
         <Statistic />
         <CareerTimeline />
         <Skills />
-        <Projects />
         <Certification />
         <ContactMe />
         <Footer />

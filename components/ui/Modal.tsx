@@ -77,7 +77,7 @@ const Modal = ({
               alt={`Image of ${title}`}
               width={400}
               height={400}
-              className="w-full md:w-2/3 h-auto object-cover rounded-lg max-h-64 md:max-h-96"
+              className="w-full md:w-4/5 h-auto object-cover rounded-lg max-h-64 md:max-h-96"
             />
           )}
         </div>

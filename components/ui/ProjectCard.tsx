@@ -41,7 +41,7 @@ const ProjectCard = ({
     <>
       <div
         data-attribute-id={id}
-        className="group z-10 flex flex-col overflow-hidden rounded-lg backdrop-blur-lg border border-border-custom  transition-transform duration-300  max-w-[350px] mx-auto relative"
+        className="group z-10 flex flex-col overflow-hidden rounded-lg backdrop-blur-lg border border-border-custom  transition-transform duration-300  max-w-[350px] mx-auto relative hover:shadow-glow"
         aria-labelledby={`project-title-${id}`}
         tabIndex={0}
       >
@@ -62,7 +62,7 @@ const ProjectCard = ({
             </div>
           )}
         </div>
-        <div className="flex-grow p-4">
+        <div className="flex-grow p-4 bg-[#3c087e1f] border-b-2 border-border-custom">
           <h1
             className="text-lg font-bold text-center Welcome-text"
             id={`project-title-${id}`}
@@ -120,7 +120,7 @@ const ProjectCard = ({
             </div>
           )}
 
-          {youtubeUrl ? (
+          {/* {youtubeUrl ? (
             <a
               href={youtubeUrl}
               target="_blank"
@@ -141,7 +141,7 @@ const ProjectCard = ({
               <FaYoutube className="text-xl" />
               <span className="text-xs mt-0">N/A</span>
             </div>
-          )}
+          )} */}
         </div>
 
         <div

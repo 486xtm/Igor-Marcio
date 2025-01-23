@@ -4,10 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 
 const navLinks = [
+  { href: '#projects', label: 'Projects' },
   { href: '#services', label: 'Services' },
   { href: '#career-timeline', label: 'Career' },
   { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
   { href: '#certifications', label: 'Certifications' },
 ];
 
