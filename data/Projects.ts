@@ -2,9 +2,58 @@ import { ProjectCategories } from '@/types';
 
 export const projectsData = [
   {
+    id: 2,
+    category: ProjectCategories.WebApplication,
+    src: '/project-img/youngheart.png',
+    title: 'YoungHearts',
+    description:
+      'A E-commerce website for young girls that buy clothes and etc',
+    sourceUrl: 'https://youngheartslingerie.com/',
+    youtubeUrl: null,
+    githubUrl: null,
+    startDate: '2023-11-23',
+    endDate: null,
+    technologyStack: [
+      'Java',
+      'Typescript',
+      'Nextjs (React)',
+      'Spring Boot',
+      'Spring Security',
+      'Spring Data JPA',
+      'Axios',
+      'OAuth2',
+      'JWT',
+      'Jest',
+      'MySQL',
+      'REST',
+      'Lombok',
+      'Liquibase',
+      'Docker',
+      'Github',
+      'Github Actions',
+      'Postman',
+      'Linux',
+      'TailwindCSS',
+      'Framer Motion',
+    ],
+    features: [
+      'Integration with payment methods',
+    ],
+    challenges: [
+      'Integrating a diverse tech stack and ensuring secure, scalable user authentication.',
+    ],
+    accomplishments: [
+      'Implemented a secure, scalable user authentication system with JWT.',
+      'Dockerized the application for easy deployment.',
+      'Automated testing with Github Actions for CI/CD.',
+      'Followed good coding practices like SOLID principles and design patterns.',
+    ],
+  },
+  {
     id: 1,
     category: ProjectCategories.WebApplication,
     src: '/project-img/starwars-portfolio.png',
+    // src: '/project-img/youngheart.png',
     title: 'Web portfolio',
     description:
       'A space-themed web portfolio showcasing my skills, experiences, and projects.',
@@ -72,6 +121,8 @@ export const projectsData = [
       'web site that was used to visualize skills and projects.',
     ],
   },
+
+
   {
     id: 9,
     category: ProjectCategories.WebApplication,
@@ -201,54 +252,7 @@ export const projectsData = [
     ],
   },
 
-  {
-    id: 2,
-    category: ProjectCategories.WebApplication,
-    src: '/project-img/codemate.png',
-    title: 'CodeMate',
-    description:
-      'A web application to enhance collaboration among tech students, allowing them to share ideas, develop projects, and network.',
-    sourceUrl: 'https://codecomrades.vercel.app/',
-    youtubeUrl: null,
-    githubUrl: null,
-    startDate: '2023-11-23',
-    endDate: null,
-    technologyStack: [
-      'Java',
-      'Typescript',
-      'Nextjs (React)',
-      'Spring Boot',
-      'Spring Security',
-      'Spring Data JPA',
-      'Axios',
-      'OAuth2',
-      'JWT',
-      'Jest',
-      'MySQL',
-      'REST',
-      'Lombok',
-      'Liquibase',
-      'Docker',
-      'Github',
-      'Github Actions',
-      'Postman',
-      'Linux',
-      'TailwindCSS',
-      'Framer Motion',
-    ],
-    features: [
-      'A collaboration platform for tech students, facilitating project sharing, networking, and investor engagement.',
-    ],
-    challenges: [
-      'Integrating a diverse tech stack and ensuring secure, scalable user authentication.',
-    ],
-    accomplishments: [
-      'Implemented a secure, scalable user authentication system with JWT.',
-      'Dockerized the application for easy deployment.',
-      'Automated testing with Github Actions for CI/CD.',
-      'Followed good coding practices like SOLID principles and design patterns.',
-    ],
-  },
+ 
   {
     id: 3,
     category: ProjectCategories.DesktopApplication,
