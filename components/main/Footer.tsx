@@ -31,7 +31,7 @@ const Footer = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/andrew-roberts-a46b80344/"
+                href="https://www.linkedin.com/in/andrew-roberts-a93490352"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white text-4xl hover:scale-110 transition-transform mirror"

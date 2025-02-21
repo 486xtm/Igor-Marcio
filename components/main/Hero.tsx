@@ -14,7 +14,7 @@ const socialLinks = [
     icon: <FaGithub />,
   },
   {
-    href: 'https://www.linkedin.com/in/andrew-roberts-a46b80344/',
+    href: 'https://www.linkedin.com/in/andrew-roberts-a93490352',
     label: 'LinkedIn',
     icon: <FaLinkedinIn />,
   },
