@@ -70,7 +70,7 @@ const Hero = () => {
           </h4>
 
           <TextGenerateEffect
-            words="I'm a self-motivated software developer with 7+ years of experience in web and mobile applications. 
+            words="I'm a self-motivated software developer with 10+ years of experience in web and mobile applications. 
             I have a Bachelor's in Computer Science and am pursuing a Master's in Software Engineering to keep learning new skills.
             Proficient in OpenAI technologies, utilizing modern development tools and creating effective CI/CD pipelines.
             I specialize in  React, Next, Vue, React Native, Node, TypeScript and so on.
