@@ -5,7 +5,7 @@ export const CertificationData = [
     date: '23/01/2024',
     description:
       'Comprehensive guide to using Docker, Compose, and Kubernetes. Includes CI/CD examples, orchestration tool management, container creation, and workflow optimization.',
-    CertificationLink: true,
+    CertificationLink: "true",
     backgroundImg: '/card-background/card-bg-1.jpeg',
     borderBackground: '/card-border/card-1.svg',
   },
@@ -15,7 +15,7 @@ export const CertificationData = [
     date: '09/03/2024',
     description:
       'The course focuses on React testing best practices, includes such as Unit Testing, Functional Testing, Snapshot Testing and Mocking ',
-    CertificationLink: true,
+    CertificationLink: "true",
     backgroundImg: '/card-background/card-bg-5.jpg',
     borderBackground: '/card-border/card-2.svg',
   },
@@ -35,7 +35,7 @@ export const CertificationData = [
     date: '19/02/2024',
     description:
       'Proficient in configuring switches, routers, and troubleshooting connectivity for network security and resource access.',
-    CertificationLink: true,
+    CertificationLink: "true",
     backgroundImg: '/card-background/card-bg-6.jpg',
     borderBackground: '/card-border/card-4.svg',
   },
