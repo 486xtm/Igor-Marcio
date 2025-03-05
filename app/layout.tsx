@@ -5,6 +5,7 @@ import StarsCanvas from '@/components/main/StarBackground';
 import Navbar from '@/components/main/Navbar';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { ThemeProvider } from 'next-themes';
 const inter = Inter({ subsets: ['latin'] });
 import { ToastContainer } from 'react-toastify';
 import HeaderBackground from '@/components/main/HeaderBackground';
@@ -20,17 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden dark`}
-      >
-        <ToastContainer />
-        <StarsCanvas />
-        <HeaderBackground />
-        <Navbar />
-        {children}
-        <Analytics />
-        <SpeedInsights />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} overflow-y-scroll overflow-x-hidden`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <ToastContainer />
+          <StarsCanvas />
+          <HeaderBackground />
+          <Navbar />
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

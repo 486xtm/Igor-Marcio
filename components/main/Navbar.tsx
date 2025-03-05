@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { ThemeSwitcher } from '../ui/ThemeSwitcher';
 
 const navLinks = [
   { href: '#projects', label: 'Projects' },
@@ -19,18 +20,20 @@ const Navbar = () => {
         <div
           className="fixed w-full flex justify-center px-3 z-50 transition-transform duration-300">
           <div
-            className="flex justify-center w-full bg-[#03001442] backdrop-blur-lg border border-border-custom rounded-2xl py-4 
-        space-x-3 md:space-x-8 z-50 md:max-w-2xl sm:max-w-lg sm:space-x-4"
+            className="flex justify-between items-center w-full bg-[#03001442] backdrop-blur-lg border border-border-custom rounded-2xl py-4 px-4 md:max-w-2xl sm:max-w-lg"
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-white sm:text-base md:text-base lg:text-lg text-xs transition duration-300 hover:text-gray-400 borderBottom"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {/* <div className="flex space-x-3 md:space-x-8 sm:space-x-4"> */}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-white sm:text-base md:text-base lg:text-lg text-xs transition duration-300 hover:text-gray-400 borderBottom"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            {/* </div> */}
+            <ThemeSwitcher />
           </div>
         </div>
       </nav>
