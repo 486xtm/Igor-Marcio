@@ -12,7 +12,7 @@ export const projectsData = [
     youtubeUrl: null,
     githubUrl: null,
     startDate: '2023-11-23',
-    endDate: null,
+    endDate: '2024-3-4',
     technologyStack: [
       'Java',
       'Typescript',
