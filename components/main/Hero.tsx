@@ -66,7 +66,7 @@ const Hero = () => {
               height={24}
               className="mr-2"
             /> */}
-            Based in Georgia, US
+            Based in Kennesaw, GA
           </h4>
 
           <TextGenerateEffect
