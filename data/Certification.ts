@@ -5,8 +5,7 @@ export const CertificationData = [
     date: '23/01/2024',
     description:
       'Comprehensive guide to using Docker, Compose, and Kubernetes. Includes CI/CD examples, orchestration tool management, container creation, and workflow optimization.',
-    CertificationLink:
-      'https://www.udemy.com/certificate/UC-1fc30466-eee4-488e-9993-67d336a8c927/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com',
+    CertificationLink: true,
     backgroundImg: '/card-background/card-bg-1.jpeg',
     borderBackground: '/card-border/card-1.svg',
   },
@@ -16,8 +15,7 @@ export const CertificationData = [
     date: '09/03/2024',
     description:
       'The course focuses on React testing best practices, includes such as Unit Testing, Functional Testing, Snapshot Testing and Mocking ',
-    CertificationLink:
-      'https://www.udemy.com/certificate/UC-a533d56e-0066-497e-9c53-417cababd964/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com',
+    CertificationLink: true,
     backgroundImg: '/card-background/card-bg-5.jpg',
     borderBackground: '/card-border/card-2.svg',
   },
@@ -37,8 +35,7 @@ export const CertificationData = [
     date: '19/02/2024',
     description:
       'Proficient in configuring switches, routers, and troubleshooting connectivity for network security and resource access.',
-    CertificationLink:
-      'https://www.linkedin.com/in/raman-mohammed/overlay/1708435218571/single-media-viewer/?profileId=ACoAADT0IfMBLEd3A48vbUCNtPekJiE7dxDF4EI',
+    CertificationLink: true,
     backgroundImg: '/card-background/card-bg-6.jpg',
     borderBackground: '/card-border/card-4.svg',
   },

@@ -15,7 +15,7 @@ const Footer = () => {
               <h2 className="text-3xl font-semibold mb-2 Welcome-text">
                 Andrew Roberts
               </h2>
-              <p className="text-gray-400 italic">Fullstack Engineer</p>
+              <p className="text-gray-400 italic">Senior Software Engineer</p>
               <p className="text-gray-400 text-sm mt-4">
                 © {currentYear} All rights reserved.
               </p>
@@ -31,7 +31,7 @@ const Footer = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/andrew-roberts-a93490352"
+                href="https://www.linkedin.com/in/andrew-roberts-51360a354"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white text-4xl hover:scale-110 transition-transform mirror"
