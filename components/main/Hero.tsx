@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedinIn, FaEnvelope, FaCode } from 'react-icons/fa';
 import { TextGenerateEffect } from '../ui/TextGenerateEffect';
 import { slideInFromLeft, slideInFromRight } from '@/utils/motion';
 import StarsCanvas from './StarBackground';
+import { useTheme } from 'next-themes';
 
 const socialLinks = [
   {
@@ -27,6 +28,7 @@ const socialLinks = [
 
 const Hero = () => {
   const [showStars, setShowStars] = useState(true);
+  const { theme } = useTheme();
 
   return (
     <section
@@ -41,14 +43,14 @@ const Hero = () => {
           className="w-full md:w-1/2 flex flex-col md:items-start items-center"
         >
           <div className="flex items-center mb-2">
-            <div className="Welcome-box py-2 px-2 border border-[#7042f88b] opacity-[0.9]">
-              <FaCode className="text-[#b49bff] mr-[10px] h-5 w-5" />
-              <div className="Welcome-text italic md:text-xl text-xs px-2 ml-[-12px] font-semibold">
+            <div className="Welcome-box py-2 px-2 border dark:border-[#7042f88b] border-[#6a3fec] opacity-[0.9]">
+              <FaCode className="dark:text-[#b49bff] text-[#6a3fec] mr-[10px] h-5 w-5" />
+              <div className={`${theme === "dark" ? "Welcome-text" : "text-[#6a3fec]"} italic md:text-xl text-xs px-2 ml-[-12px] font-semibold`}>
                 I&rsquo;m Andrew Roberts - Senior Software Engineer
               </div>
             </div>
           </div>
-          <h2 className="md:text-5xl text-xl font-bold leading-tight">
+          <h2 className="md:text-5xl dark:text-white text-gray-800 text-xl font-bold leading-tight">
             Always{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               learning
@@ -58,7 +60,7 @@ const Hero = () => {
               building
             </span>
           </h2>
-          <h4 className="md:text-xl text-base font-medium text-gray-400 mt-1 mb-[-6px] italic flex ">
+          <h4 className="md:text-xl text-base font-medium dark:text-gray-400 text-black mt-1 mb-[-6px] italic flex ">
             {/* <Image
               src="/sweden.png"
               alt="Sweden Flag"
@@ -78,7 +80,7 @@ const Hero = () => {
           />
           <div className="flex flex-col md:flex-row items-center mt-2 z-20">
             <button
-              className=" md:inline-block sm:px-8 sm:py-2 px-4 py-2 sm:text-sm md:text-base lg:text-lg text-sm rounded-xl transition-colors button-3d-primary"
+              className=" md:inline-block sm:px-8 sm:py-2 px-4 py-2 sm:text-sm md:text-base lg:text-lg text-sm rounded-xl transition-colors button-3d-primary text-black dark:text-white"
               onClick={() => setShowStars(!showStars)}
             >
               Disable Background Stars
@@ -88,7 +90,7 @@ const Hero = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white text-2xl md:text-4xl hover:scale-110 transition-transform"
+                  className="dark:text-white text-black text-2xl md:text-4xl hover:scale-110 transition-transform"
                   target="_blank"
                   rel="noreferrer"
                 >
