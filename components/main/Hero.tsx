@@ -83,7 +83,7 @@ const Hero = () => {
               className=" md:inline-block sm:px-8 sm:py-2 px-4 py-2 sm:text-sm md:text-base lg:text-lg text-sm rounded-xl transition-colors button-3d-primary text-black dark:text-white"
               onClick={() => setShowStars(!showStars)}
             >
-              Disable Background Stars
+              Disable Background
             </button>
             <div className="flex gap-4 md:gap-6 justify-center md:justify-end items-center mt-6 md:mt-0 md:ml-6">
               {socialLinks.map((link) => (
