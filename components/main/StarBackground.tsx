@@ -149,8 +149,9 @@ const NebulaBackground = () => {
 };
 
 const StarsCanvas = ({ show }: { show?: boolean }) => {
-  if (!show) return null;
   const { theme } = useTheme();
+  
+  if (!show) return null;
 
   return (
     <div className="w-full h-auto fixed inset-0 pointer-events-none -z-50">
