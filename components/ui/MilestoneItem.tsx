@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { TechnologyChip } from './TechnologyChip';
+import { useTheme } from 'next-themes';
 
 interface Milestone {
   id: number;
@@ -25,6 +26,7 @@ const itemVariants = {
 };
 
 const MilestoneItem: React.FC<MilestoneProps> = ({ milestones }) => {
+  const { theme } = useTheme();
   return (
     <div className="container mx-auto px-4">
       <div className="relative">
@@ -57,24 +59,24 @@ const MilestoneItem: React.FC<MilestoneProps> = ({ milestones }) => {
                 transition={{ duration: 0.6, delay: id * 0.3 }}
                 className="ml-[25%] w-full md:w-7/12 text-left"
               >
-                <div className="bg-[rgba(33,149,243,0.07)] rounded-lg shadow-lg shadow-blue-700/20 p-5 backdrop-blur-lg">
+                <div className="dark:bg-[rgba(33,149,243,0.07)] bg-[rgba(7,11,15,0.07)]  rounded-lg shadow-lg shadow-blue-700/20 p-5 backdrop-blur-lg">
                   <div className="flex flex-col sm:flex-row sm:justify-between w-full mb-1">
-                    <h3 className="md:text-xl text-base font-semibold Welcome-text">
+                    <h3 className={`md:text-xl text-base font-semibold ${theme === "dark" ?"Welcome-text" : "text-purple-700"}`}>
                       {title}
                     </h3>
-                    <span className="text-gray-400 sm:text-xs text-xs my-1 sm:my-0">
+                    <span className="dark:text-gray-400 text-gray-900 sm:text-xs text-xs my-1 sm:my-0">
                       {date}
                     </span>
                   </div>
-                  <p className="sm:mt-0 text-gray-300 text-xs sm:text-sm italic">
+                  <p className="sm:mt-0 dark:text-gray-300 text-gray-800 text-xs sm:text-sm italic">
                     {organization}, {location}
                   </p>
                   {gpa && (
-                    <p className="text-gray-400 text-xs sm:text-sm italic">
+                    <p className="dark:text-gray-400 text-gray-900 text-xs sm:text-sm italic">
                       GPA: {gpa.toFixed(2)} / 5
                     </p>
                   )}
-                  <ul className="my-2 text-gray-400 text-xs sm:text-sm list-disc ml-4 sm:ml-6">
+                  <ul className="my-2 dark:text-gray-400 text-gray-900 text-xs sm:text-sm list-disc ml-4 sm:ml-6">
                     {description?.map((point, index) => (
                       <li key={index}>{point}</li>
                     ))}

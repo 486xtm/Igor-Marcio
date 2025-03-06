@@ -6,10 +6,11 @@ import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { CertificationData } from '@/data/Certification';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 export const Certification = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true
+    triggerOnce: true,
   });
   return (
     <motion.section

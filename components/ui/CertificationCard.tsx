@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { handleMissingLink } from '@/utils/Toaster';
+import { useTheme } from 'next-themes';
 
 interface CertificationCardProps {
   id: number;
@@ -33,6 +34,7 @@ export const CertificationCard = ({
   CertificationLink,
 }: CertificationCardProps) => {
   const { ref, inView } = useInView({ triggerOnce: true });
+  const { theme } = useTheme();
   return (
     <motion.article
       className="flex flex-wrap gap-10 mb-10 sm:px-2 px-6 backdrop-blur-md "
@@ -53,10 +55,10 @@ export const CertificationCard = ({
             {date}
           </header>
           <div>
-            <h5 className="text-base md:text-xl mt-4 font-bold mb-2 Welcome-text">
+            <h5 className={`text-base md:text-xl mt-4 font-bold mb-2 ${theme === "dark" ? "Welcome-text" : "text-purple-700"}`}>
               {name}
             </h5>
-            <p className="text-sm md:text-base italic text-gray-300 mb-6">
+            <p className="text-sm md:text-base italic dark:text-gray-300 text-gray-800 mb-6">
               {description}
             </p>
           </div>
@@ -73,17 +75,17 @@ export const CertificationCard = ({
               {CertificationLink ? (
                 <a
                   href={CertificationLink}
-                  className="flex items-center font-code text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-white transform hover:scale-105 transition-transform duration-300"
+                  className="flex items-center font-code text-xs font-bold uppercase tracking-wider dark:text-gray-300 text-gray-800 hover:text-white transform hover:scale-105 transition-transform duration-300"
                   target="_blank"
                   rel="noreferrer"
                 >
                   See Certification
-                  <ArrowRightCircleIcon className="h-5 w-5 ml-2 text-gray-300" />
+                  <ArrowRightCircleIcon className="h-5 w-5 ml-2 dark:text-gray-300 text-gray-800" />
                 </a>
               ) : (
-                <span className="flex items-center font-code text-xs font-bold uppercase tracking-wider text-gray-300 cursor-not-allowed">
+                <span className="flex items-center font-code text-xs font-bold uppercase tracking-wider dark:text-gray-300 text-gray-800 cursor-not-allowed">
                   Missing Certification
-                  <ArrowRightCircleIcon className="h-5 w-5 ml-2 text-gray-300" />
+                  <ArrowRightCircleIcon className="h-5 w-5 ml-2 dark:text-gray-300 text-gray-800" />
                 </span>
               )}
             </button>

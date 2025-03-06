@@ -11,11 +11,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import curve1 from '@/public/curve-1.svg';
 import curve2 from '@/public/curve-2.svg';
+import { useTheme } from 'next-themes';
 
 const Services = () => {
   const totalCount = ServicesApps.length;
   const { ref, inView } = useInView({ triggerOnce: true });
-
+  const { theme } = useTheme();
   return (
     <>
       <section className="px-4 lg:px-8 xl:px-16" id="services">
@@ -41,7 +42,7 @@ const Services = () => {
 
           <div className="lg:ml-auto xl:w-[38rem] lg:w-1/2 mt-4">
             <motion.p
-              className="mb-4 Welcome-text text-center md:text-left md:mb-16 lg:mb-24 italic font-semibold lg:w-[22rem] lg:mx-auto"
+              className={`mb-4 ${theme === "dark" ? "Welcome-text" : "text-purple-700"} text-center md:text-left md:mb-16 lg:mb-24 italic font-semibold lg:w-[22rem] lg:mx-auto`}
               ref={ref}
               initial="hidden"
               animate={inView ? 'visible' : 'hidden'}

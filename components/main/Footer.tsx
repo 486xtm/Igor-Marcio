@@ -1,22 +1,23 @@
 'use client';
 
+import { useTheme } from 'next-themes';
 import React from 'react';
 import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const {theme} = useTheme();
   return (
     <>
-      <footer className="w-full py-12 backdrop-blur-sm border-t border-[#645AFF] z-50">
+      <footer className="w-full py-12 bg-[#d6d5df42] dark:bg-[#03001442] backdrop-blur-sm mt-5 border-t border-[#645AFF] z-50">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center">
             <div className="text-white text-center lg:text-left mb-8 lg:mb-0">
-              <h2 className="text-3xl font-semibold mb-2 Welcome-text">
+              <h2 className={`text-3xl font-semibold mb-2 ${theme === "dark" ? "Welcome-text" : "text-purple-700"}`}>
                 Andrew Roberts
               </h2>
-              <p className="text-gray-400 italic">Senior Software Engineer</p>
-              <p className="text-gray-400 text-sm mt-4">
+              <p className="text-gray-900 dark:text-gray-400 italic">Senior Software Engineer</p>
+              <p className="text-gray-900 dark:text-gray-400 text-sm mt-4">
                 © {currentYear} All rights reserved.
               </p>
             </div>
@@ -25,7 +26,7 @@ const Footer = () => {
                 href="https://github.com/486xtm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-4xl hover:scale-110 transition-transform mirror"
+                className="text-black dark:text-white text-4xl hover:scale-110 transition-transform mirror"
                 aria-label="Andrew Roberts on GitHub"
               >
                 <FaGithub />
@@ -34,14 +35,14 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/andrew-roberts-51360a354"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-4xl hover:scale-110 transition-transform mirror"
+                className="text-black dark:text-white text-4xl hover:scale-110 transition-transform mirror"
                 aria-label="Andrew Roberts on Linkedin"
               >
                 <FaLinkedinIn />
               </a>
               <a
                 href="mailto:roberts94.me@gmail.com"
-                className="text-white text-4xl hover:scale-110 transition-transform mirror"
+                className="text-black dark:text-white text-4xl hover:scale-110 transition-transform mirror"
                 aria-label="Andrew Roberts on Email"
               >
                 <FaEnvelope />

@@ -5,12 +5,13 @@ import { BeakerIcon } from '@heroicons/react/24/solid';
 import SectionHeader from '../ui/SectionHeader';
 import { useInView } from 'react-intersection-observer';
 import SkillsGallery from '../ui/SkillsGallery';
+import { useTheme } from 'next-themes';
 
 const Skills = () => {
   const { ref, inView } = useInView({
     triggerOnce: true
   });
-
+  const { theme } = useTheme();
   return (
     <section
       ref={ref}
@@ -25,9 +26,9 @@ const Skills = () => {
         />
       </div>
       <SkillsGallery skillsData={SkillsData} />
-      <div className="w-full h-full absolute top-0 left-0 z-[-10] opacity-30">
+      {theme === "dark" && <div className="w-full h-full absolute top-0 left-0 z-[-10] dark:opacity-30 opacity-100 ">
         <video
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover dark:opacity-40 opacity-100"
           preload="none"
           playsInline
           loop
@@ -35,7 +36,7 @@ const Skills = () => {
           autoPlay
           src="/video/death_star.mp4"
         />
-      </div>
+      </div>}
     </section>
   );
 };

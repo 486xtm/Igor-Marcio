@@ -3,6 +3,7 @@ import React, { useState, memo } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
 import Modal from './Modal';
 import { handleMissingLink } from '@/utils/Toaster';
+import { useTheme } from 'next-themes';
 
 interface ProjectCardProps {
   id: number;
@@ -36,12 +37,13 @@ const ProjectCard = ({
   accomplishments,
 }: ProjectCardProps) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const { theme } = useTheme();
 
   return (
     <>
       <div
         data-attribute-id={id}
-        className="group z-10 flex flex-col overflow-hidden rounded-lg backdrop-blur-lg border border-border-custom  transition-transform duration-300  max-w-[350px] mx-auto relative hover:shadow-glow"
+        className="group z-10 flex flex-col overflow-hidden rounded-lg backdrop-blur-lg border dark:border-border-custom border-gray-500 transition-transform duration-300  max-w-[350px] mx-auto relative hover:shadow-glow"
         aria-labelledby={`project-title-${id}`}
         tabIndex={0}
       >
@@ -62,14 +64,14 @@ const ProjectCard = ({
             </div>
           )}
         </div>
-        <div className="flex-grow p-4 bg-[#3c087e1f] border-b-2 border-border-custom">
+        <div className="flex-grow p-4 bg-[#3c087e1f] border-b border-gray-500 dark:border-border-custom">
           <h1
-            className="text-lg font-bold text-center Welcome-text"
+            className={`text-lg font-bold text-center ${theme === "dark" ? "Welcome-text" : "text-purple-700"}`}
             id={`project-title-${id}`}
           >
             {title}
           </h1>
-          <p className="mt-2 text-sm text-gray-300 italic text-center">
+          <p className="mt-2 text-sm dark:text-gray-300 text-gray-900 italic text-center">
             {description}
           </p>
         </div>
@@ -80,7 +82,7 @@ const ProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View ${title} on GitHub`}
-              className="flex items-center text-white z-20 space-x-2"
+              className="flex items-center text-black dark:text-white z-20 space-x-2"
               onClick={(e) => e.stopPropagation()}
             >
               <FaGithub className="text-xl" />
@@ -88,7 +90,7 @@ const ProjectCard = ({
             </a>
           ) : (
             <div
-              className="flex items-center text-white opacity-50 cursor-not-allowed space-x-2"
+              className="flex items-center text-black dark:text-white opacity-50 cursor-not-allowed space-x-2"
               onClick={() => handleMissingLink('Github')}
               aria-hidden="true"
             >
@@ -103,7 +105,7 @@ const ProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View ${title} live demo`}
-              className="flex items-center text-white space-x-2"
+              className="flex items-center text-black dark:text-white space-x-2"
               onClick={(e) => e.stopPropagation()}
             >
               <FaExternalLinkAlt className="text-xl" />
@@ -111,7 +113,7 @@ const ProjectCard = ({
             </a>
           ) : (
             <div
-              className="flex items-center text-white opacity-50 cursor-not-allowed space-x-2"
+              className="flex items-center text-black dark:text-white opacity-50 cursor-not-allowed space-x-2"
               onClick={() => handleMissingLink('live demo')}
               aria-hidden="true"
             >

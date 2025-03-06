@@ -44,7 +44,7 @@ const SkillItem = ({
           alt={skillName}
           className="w-16 h-16 md:w-22 md:h-22"
         />
-        <p className="mt-2 text-xs md:text-sm text-gray-400">{skillName}</p>
+        <p className="mt-2 text-xs md:text-sm dark:text-gray-400 text-gray-900">{skillName}</p>
       </div>
     </motion.div>
   );

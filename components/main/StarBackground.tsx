@@ -6,6 +6,7 @@ import { Points, PointMaterial } from '@react-three/drei';
 import { TextureLoader } from 'three';
 // @ts-ignore
 import * as random from 'maath/random/dist/maath-random.esm';
+import { useTheme } from 'next-themes';
 
 const getRandomPosition = (radius: number) => {
   return [
@@ -49,6 +50,8 @@ const StarBackground = (props: any) => {
     ref2.current.rotation.y -= delta / 18;
   });
 
+  const { theme } = useTheme();
+
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
@@ -60,7 +63,7 @@ const StarBackground = (props: any) => {
       >
         <PointMaterial
           transparent
-          color="#fff"
+          color={theme === 'dark' ? '#fff' : '#f00'}
           size={0.003}
           sizeAttenuation={true}
           depthWrite={false}
@@ -75,7 +78,7 @@ const StarBackground = (props: any) => {
       >
         <PointMaterial
           transparent
-          color="#fff"
+          color={theme === 'dark' ? '#fff' : '#f00'}
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
@@ -86,7 +89,11 @@ const StarBackground = (props: any) => {
 };
 
 const NebulaBackground = () => {
-  const texture = useLoader(TextureLoader, '/nebula.png');
+  const { theme } = useTheme();
+  const texture = useLoader(
+    TextureLoader,
+    theme === 'dark' ? '/nebula.png' : '/flower.png',
+  );
 
   const nebulaInstances = useRef(
     new Array(5).fill(null).map(() => ({
@@ -143,15 +150,30 @@ const NebulaBackground = () => {
 
 const StarsCanvas = ({ show }: { show?: boolean }) => {
   if (!show) return null;
+  const { theme } = useTheme();
 
   return (
     <div className="w-full h-auto fixed inset-0 pointer-events-none -z-50">
-      <Canvas camera={{ position: [0, 0, 1] }}>
-        <Suspense fallback={null}>
-          <NebulaBackground />
-          <StarBackground />
-        </Suspense>
-      </Canvas>
+      {theme === 'dark' ? (
+        <Canvas camera={{ position: [0, 0, 1] }}>
+          <Suspense fallback={null}>
+            <NebulaBackground />
+            <StarBackground />
+          </Suspense>
+        </Canvas>
+      ) : (
+        <div className="w-full h-full absolute top-0 left-0 z-[-10] dark:opacity-30 opacity-100 ">
+          <video
+            className="w-full h-full object-cover dark:opacity-40 opacity-100"
+            preload="none"
+            playsInline
+            loop
+            muted
+            autoPlay
+            src="/video/light.mp4"
+          />
+        </div>
+      )}
     </div>
   );
 };

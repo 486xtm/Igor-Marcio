@@ -12,7 +12,7 @@ import CareerTimeline from '@/components/main/CareerTimeline';
 
 export default function Home() {
   return (
-    <main className="h-full w-full">
+    <main className="h-full w-full ">
       <div className="flex flex-col gap-12 md:gap-24 lg:gap-32">
         <Hero />
         <Projects />

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { slideInFromTop, slideInWithDelay } from '@/utils/motion';
 import CountUp from 'react-countup';
+import { useTheme } from 'next-themes';
 
 interface StatisticCardProps {
   id: number;
@@ -21,7 +22,7 @@ const StatisticCard = ({
   description,
 }: StatisticCardProps) => {
   const { ref, inView } = useInView({ triggerOnce: true });
-
+  const { theme } = useTheme();
   return (
     <motion.div
       ref={ref}
@@ -30,7 +31,7 @@ const StatisticCard = ({
       variants={slideInWithDelay(id * 0.3)}
       className="p-4 md:w-1/4 sm:w-1/2 w-full backdrop-blur-sm"
     >
-      <div className="flex flex-col items-center border-b-2 border-[#645AFF] p-4 text-center bg-[rgba(33,149,243,0.05)] rounded-lg">
+      <div className="flex flex-col items-center border-b-2 border-[#645AFF] p-4 text-center dark:bg-[rgba(33,149,243,0.05)] bg-[rgba(7,11,15,0.07)]  rounded-lg">
         <Image
           src={icon}
           alt="Statistic Icon"
@@ -38,7 +39,7 @@ const StatisticCard = ({
           width={50}
           height={50}
         />
-        <h2 className="font-bold md:text-2xl text-xl Welcome-text mt-2 sm:mt-4">
+        <h2 className={`font-bold md:text-2xl text-xl ${theme === "dark" ? "Welcome-text" : "text-purple-700"} mt-2 sm:mt-4`}>
           {inView ? (
             <>
               <CountUp end={number} duration={14} />
@@ -48,7 +49,7 @@ const StatisticCard = ({
             0
           )}
         </h2>
-        <p className="text-gray-400 mt-2 text-xs sm:text-sm md:text-base font-semibold">
+        <p className="dark:text-gray-400 text-gray-950 mt-2 text-xs sm:text-sm md:text-base font-semibold">
           {description}
         </p>
       </div>

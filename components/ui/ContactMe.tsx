@@ -17,7 +17,7 @@ const ContactMe = () => {
       <div className="flex flex-col items-center -mt-12">
         <a
           href="mailto:roberts94.me@gmail.com"
-          className="py-3 px-10 text-lg font-semibold text-white rounded-full cursor-pointer transition duration-500 ease-in-out transform hover:scale-110 button-3d-primary"
+          className="py-3 px-10 text-lg font-semibold text-black dark:text-white rounded-full cursor-pointer transition duration-500 ease-in-out transform hover:scale-110 button-3d-primary"
           onMouseEnter={() => setImageSrc('/robothappy.png')}
           onMouseLeave={() => setImageSrc('/robotnormal.png')}
         >
