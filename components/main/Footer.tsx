@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
             <address className="flex justify-center space-x-8 pb-4">
               <a
-                href="https://github.com/486xtm"
+                href="https://github.com/andrew94316"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black dark:text-white text-4xl hover:scale-110 transition-transform mirror"

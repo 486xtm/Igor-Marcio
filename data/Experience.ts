@@ -8,7 +8,7 @@ export const ExperienceData = [
     title: 'Senior Software Engineer',
     img: '/company-logo/cybertone.png',
     organization: "Cybertone Inc",
-    location: 'New York City, NY',
+    location: 'New York, NY',
     description: [
       'Optimized caching with Redis and improved real-time data exchange using a custom socket library, reducing application downtime from 5 seconds to 1 second in the patient management system, which boosted responsiveness and user experience.',
       'Built a HIPAA-compliant patient management system with Python and FastAPI, implementing secure data protocols that led to a 40% increase in registration efficiency and a 30% reduction in appointment scheduling time.',
@@ -48,9 +48,9 @@ export const ExperienceData = [
     type: MilestoneTypes.Work,
     date: 'February 2019 - March 2023',
     title: 'Senior Full Stack Developer',
-    img: '/company-logo/mediahub.jpg',
-    organization: "Mediahub",
-    location: 'Tbilisi, GA',
+    img: '/company-logo/hubspire.jpg',
+    organization: "HubSpire",
+    location: 'New York, NY',
     description: [
       "Used Next.js and React's new feature—Hooks—to rewrite and refactor frontend applications, reducing the codebase by 30% for better maintenance.",
       'Implemented GraphQL and web scraping technologies to enhance efficiency by 30% for e-commerce and statistics websites.',
@@ -86,7 +86,7 @@ export const ExperienceData = [
     date: 'March 2018 - January 2019',
     title: 'Full Stack Developer',
     img: '/company-logo/sigma.png',
-    organization: 'Sigma Inc',
+    organization: 'Sigma Solve Inc',
     location: 'Sunrise, FL',
     description: [
       "Developed and optimized React.js components for dynamic, responsive user interfaces, achieving 95% design accuracy from Figma.",
@@ -123,9 +123,9 @@ export const ExperienceData = [
     type: MilestoneTypes.Work,
     date: 'September 2016 - February 2018',
     title: 'Software Developer',
-    img: '/company-logo/wandio.jpg',
-    organization: 'Wandio',
-    location: 'Tbilisi, GA',
+    img: '/company-logo/darwoft.jpg',
+    organization: 'Darwoft',
+    location: 'Dunwoody, GA',
     description: [
       'Worked closely with designers to ensure 95% consistency between design and development, translating UI/UX designs into fully functional websites using HTML, CSS, jQuery, and Bootstrap.',
       'Collaborated with the team to gather software requirements and contributed to the development process, leading to a 15% improvement in project delivery times.',

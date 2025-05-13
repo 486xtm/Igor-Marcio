@@ -10,7 +10,7 @@ import { useTheme } from 'next-themes';
 
 const socialLinks = [
   {
-    href: 'https://github.com/486xtm',
+    href: 'https://github.com/andrew94316',
     label: 'GitHub',
     icon: <FaGithub />,
   },
@@ -40,7 +40,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={slideInFromLeft(1)}
-          className="w-full md:w-1/2 flex flex-col md:items-start items-center"
+          className="w-full md:w-2/3 flex flex-col md:items-start items-center"
         >
           <div className="flex items-center mb-2">
             <div className="Welcome-box py-2 px-2 border dark:border-[#7042f88b] border-[#6a3fec] opacity-[0.9]">
@@ -105,7 +105,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={slideInFromRight(1)}
-          className="w-full md:w-1/2 px-4 mt-6 md:mt-2 flex justify-center items-center"
+          className="w-full md:w-1/3 px-4 mt-6 md:mt-2 flex justify-center items-center"
         >
           <div className="relative overflow-hidden rounded-3xl bg-[#ffffff10] backdrop-blur-xl border border-border-custom flex justify-center items-center shadow-xl shadow-gray-800 w-[200px] h-[300px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[370px]">
             <Image
