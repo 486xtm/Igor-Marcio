@@ -56,9 +56,9 @@ export const projectsData = [
     title: 'Web portfolio',
     description:
       'A space-themed web portfolio showcasing my skills, experiences, and projects.',
-    // sourceUrl: 'https://andrew-roberts-portfolio-u79v.vercel.app/',
+    sourceUrl: null,
     youtubeUrl: null,
-    // githubUrl: 'https://github.com/486xtm/andrew_roberts_portfolio',
+    githubUrl: null,
     startDate: '2024-02-15',
     endDate: '2024-03-09',
     technologyStack: [
