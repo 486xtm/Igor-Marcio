@@ -53,13 +53,12 @@ export const projectsData = [
     id: 1,
     category: ProjectCategories.WebApplication,
     src: '/project-img/starwars-portfolio.png',
-    // src: '/project-img/youngheart.png',
     title: 'Web portfolio',
     description:
       'A space-themed web portfolio showcasing my skills, experiences, and projects.',
-    sourceUrl: 'https://andrew-roberts-portfolio-u79v.vercel.app/',
+    // sourceUrl: 'https://andrew-roberts-portfolio-u79v.vercel.app/',
     youtubeUrl: null,
-    githubUrl: 'https://github.com/486xtm/andrew_roberts_portfolio',
+    // githubUrl: 'https://github.com/486xtm/andrew_roberts_portfolio',
     startDate: '2024-02-15',
     endDate: '2024-03-09',
     technologyStack: [

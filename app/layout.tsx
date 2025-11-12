@@ -11,8 +11,8 @@ import { ToastContainer } from 'react-toastify';
 import HeaderBackground from '@/components/main/HeaderBackground';
 
 export const metadata: Metadata = {
-  title: 'Andrew Roberts Portfolio',
-  description: "Andrew Roberts's portfolio website",
+  title: 'Igor Marcio Portfolio',
+  description: "Igor Marcio's portfolio website",
 };
 
 export default function RootLayout({

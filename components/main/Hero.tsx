@@ -10,17 +10,17 @@ import { useTheme } from 'next-themes';
 
 const socialLinks = [
   {
-    href: 'https://github.com/andrew94316',
+    href: 'https://github.com/486xtm',
     label: 'GitHub',
     icon: <FaGithub />,
   },
   {
-    href: 'https://www.linkedin.com/in/andrew-r-664994358/',
+    href: 'https://www.linkedin.com/in/igor-marcio-155099391',
     label: 'LinkedIn',
     icon: <FaLinkedinIn />,
   },
   {
-    href: 'mailto:roberts94.me@gmail.com',
+    href: 'mailto:igormarcio0114@gmail.com',
     label: 'Email',
     icon: <FaEnvelope />,
   },
@@ -35,7 +35,7 @@ const Hero = () => {
       id="hero"
       className="flex items-center h-auto md:min-h-[70vh] lg:min-h-[80vh] py-2 px-2 mt-12 text-white"
     >
-      <div className="container mx-auto flex flex-wrap items-center">
+      <div className="container mx-auto justify-center flex flex-wrap items-center">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -46,7 +46,7 @@ const Hero = () => {
             <div className="Welcome-box py-2 px-2 border dark:border-[#7042f88b] border-[#6a3fec] opacity-[0.9]">
               <FaCode className="dark:text-[#b49bff] text-[#6a3fec] mr-[10px] h-5 w-5" />
               <div className={`${theme === "dark" ? "Welcome-text" : "text-[#6a3fec]"} italic md:text-xl text-xs px-2 ml-[-12px] font-semibold`}>
-                I&rsquo;m Andrew Roberts - Senior Software Engineer
+                I&rsquo;m Igor Marcio - Senior Software Engineer
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Hero = () => {
               height={24}
               className="mr-2"
             /> */}
-            Based in Kennesaw, GA
+            Based in Brazil
           </h4>
 
           <TextGenerateEffect
@@ -98,27 +98,6 @@ const Hero = () => {
                 </a>
               ))}
             </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={slideInFromRight(1)}
-          className="w-full md:w-1/3 px-4 mt-6 md:mt-2 flex justify-center items-center"
-        >
-          <div className="relative overflow-hidden rounded-3xl bg-[#ffffff10] backdrop-blur-xl border border-border-custom flex justify-center items-center shadow-xl shadow-gray-800 w-[200px] h-[300px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[370px]">
-            <Image
-              src="/photo.jpg"
-              alt="Andrew Roberts Image"
-              className="object-cover object-bottom filter  contrast-65 opacity-90"
-              priority
-              fill
-              quality={80}
-              sizes="(max-width: 768px) 100vw, 
-              (max-width: 1200px) 50vw, 
-              33vw"
-            />
           </div>
         </motion.div>
       </div>

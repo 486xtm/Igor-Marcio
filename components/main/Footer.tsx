@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center">
             <div className="text-white text-center lg:text-left mb-8 lg:mb-0">
               <h2 className={`text-3xl font-semibold mb-2 ${theme === "dark" ? "Welcome-text" : "text-purple-700"}`}>
-                Andrew Roberts
+                Igor Marcio
               </h2>
               <p className="text-gray-900 dark:text-gray-400 italic">Senior Software Engineer</p>
               <p className="text-gray-900 dark:text-gray-400 text-sm mt-4">
@@ -23,27 +23,27 @@ const Footer = () => {
             </div>
             <address className="flex justify-center space-x-8 pb-4">
               <a
-                href="https://github.com/andrew94316"
+                href="https://github.com/486xtm"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black dark:text-white text-4xl hover:scale-110 transition-transform mirror"
-                aria-label="Andrew Roberts on GitHub"
+                aria-label="Igor Marcio on GitHub"
               >
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/andrew-r-664994358/"
+                href="https://www.linkedin.com/in/igor-marcio-155099391"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black dark:text-white text-4xl hover:scale-110 transition-transform mirror"
-                aria-label="Andrew Roberts on Linkedin"
+                aria-label="Igor Marcio on Linkedin"
               >
                 <FaLinkedinIn />
               </a>
               <a
-                href="mailto:roberts94.me@gmail.com"
+                href="mailto:igormarcio0114@gmail.com"
                 className="text-black dark:text-white text-4xl hover:scale-110 transition-transform mirror"
-                aria-label="Andrew Roberts on Email"
+                aria-label="Igor Marcio on Email"
               >
                 <FaEnvelope />
               </a>
